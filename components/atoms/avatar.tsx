@@ -4,6 +4,7 @@ interface AvatarProps {
   src?: string | null;
   name: string;
   size?: 'sm' | 'md' | 'lg';
+  isOnline: boolean;
 }
 
 const sizeClasses = {
@@ -12,16 +13,25 @@ const sizeClasses = {
   lg: 'w-16 h-16 text-lg',
 };
 
-export default function Avatar({ src, name, size = 'md' }: AvatarProps) {
+export default function Avatar({ src, name, size = 'md', isOnline }: AvatarProps) {
 
   return (
-    <div className={`relative flex items-center justify-center rounded-full bg-gray-300 text-gray-700 font-semibold ${sizeClasses[size]} overflow-hidden`}>
+    <div className='absolute'>
+    <div className={`relative items-center justify-center rounded-full bg-gray-300 text-gray-700 font-semibold ${sizeClasses[size]} overflow-hidden`}>
         <Image
           src={src ?? "http://github.com/shadcn.png"}
-          alt={name}
+          alt={name ?? "user"}
           fill
           className="rounded-full object-cover"
         />
+    </div>
+        <span className={
+            `absolute bottom-0
+            ${size === "sm" ? "size-2 right-1" : "size-3 right-2"}
+            ${ isOnline ? "bg-green-600" : "bg-red-700"}
+            rounded-full border-white`
+        } />
+
     </div>
   );
 }
