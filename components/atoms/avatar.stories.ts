@@ -34,3 +34,9 @@ export const Large = {
         size: "lg"
     }
 } satisfies Story;
+
+export const XLarge = {
+     args: {
+        size: "xlg"
+    }
+} satisfies Story;
