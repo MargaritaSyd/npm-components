@@ -20,7 +20,7 @@ export default function Avatar({ src, name, size = 'md', isOnline }: AvatarProps
     <div className='absolute'>
     <div className={`relative items-center justify-center rounded-full bg-gray-300 text-gray-700 font-semibold ${sizeClasses[size]} overflow-hidden`}>
         <Image
-          src={src ?? "http://github.com/shadcn.png"}
+          src={src ?? "/default-user.png"}
           alt={name ?? "user"}
           fill
           className="rounded-full object-cover"
