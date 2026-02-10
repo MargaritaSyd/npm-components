@@ -7,12 +7,12 @@ interface HeaderProps {
   sticky?: boolean;
 }
 
-export default function Header({ 
+export const Header = ({ 
   logo, 
   actions, 
   userName, 
   sticky = true 
-}: HeaderProps) {
+}: HeaderProps) => {
   return (
     <header className={`
       w-full bg-white border-b border-slate-200 px-6 py-3 

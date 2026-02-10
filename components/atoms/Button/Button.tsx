@@ -23,13 +23,13 @@ const variantClasses = {
 
 const disabledClasses = 'bg-gray-300 text-gray-500 cursor-not-allowed opacity-70 shadow-none hover:bg-gray-300 hover:no-underline';
 
-export default function Button({ 
+export const Button = ({ 
   text, 
   size = 'md', 
   variant = 'primary', 
   disabled = false, 
   onClick 
-}: ButtonProps) {
+}: ButtonProps) => {
 
   return (
     <button 

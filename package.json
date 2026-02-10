@@ -1,10 +1,12 @@
 {
-  "name": "npm-components",
-  "version": "0.1.0",
-  "private": true,
+  "name": "margaritas-design",
+  "version": "1.0.0",
+  "private": false,
+  "author": "Margarita Syddall",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build-lib": "tsup src/index.ts --format cjs,esm --dts --clean",
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
@@ -43,6 +45,7 @@
     "playwright": "^1.58.2",
     "storybook": "^10.2.8",
     "tailwindcss": "^4",
+    "tsup": "^8.5.1",
     "typescript": "^5",
     "vite": "^7.3.1",
     "vitest": "^4.0.18"

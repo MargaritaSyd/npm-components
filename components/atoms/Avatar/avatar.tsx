@@ -14,7 +14,7 @@ const sizeClasses = {
   xlg: 'w-18 h-18 text-lg',
 };
 
-export default function Avatar({ src, name, size = 'md', isOnline }: AvatarProps) {
+export const Avatar = ({ src, name, size = 'md', isOnline }: AvatarProps) => {
 
   return (
     <div className='absolute'>

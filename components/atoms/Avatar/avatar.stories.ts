@@ -2,7 +2,8 @@
 // 2.stories
 // 3. type meta and stories
 import {type Meta, type StoryObj} from "@storybook/nextjs-vite"
-import Avatar from "./avatar";
+import Avatar from "./Avatar";
+
 const meta = {
     title: "Design System/Atom/Avatar",
     component: Avatar,
