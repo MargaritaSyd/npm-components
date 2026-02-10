@@ -23,6 +23,8 @@ export default defineConfig({
         ],
         test: {
           name: 'storybook',
+          globals: true,
+          environment: 'chromium',
           browser: {
             enabled: true,
             headless: true,
@@ -30,6 +32,8 @@ export default defineConfig({
             instances: [{ browser: 'chromium' }],
           },
           setupFiles: ['.storybook/vitest.setup.ts'],
+          include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+          exclude: ['**/node_modules/**', '**/dist/**'],
         },
       },
     ],

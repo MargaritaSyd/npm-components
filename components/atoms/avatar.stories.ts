@@ -4,7 +4,7 @@
 import {type Meta, type StoryObj} from "@storybook/nextjs-vite"
 import Avatar from "./avatar";
 const meta = {
-    title: "Design System/Atom/Button",
+    title: "Design System/Atom/Avatar",
     component: Avatar,
     args: {
         size: "md"
